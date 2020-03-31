@@ -1,0 +1,16 @@
+---
+# tasks file for logrotate - Debian
+
+- name: "Installing {{ logrotate_app }} on Debian based systems."
+  apt:
+    name: "{{ logrotate_app }}"
+    state: "{{ logrotate_desired_state }}"
+    force_apt_get: yes
+    update_cache: yes
+
+- name: "Setup logrotate configuration for {{ logrotate_configs.name }}"
+  template:
+    src: "{{ logrotate_template }}"
+    dest: "{{ logrotate_config_dir }}/{{ item.name }}"
+  with_items: "{{ logrotate_configs }}"
+  when: logrotate_configs is defined
