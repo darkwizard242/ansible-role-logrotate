@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/darkwizard242/ansible-role-logrotate.svg?branch=master)](https://travis-ci.com/darkwizard242/ansible-role-logrotate) ![Ansible Role](https://img.shields.io/ansible/role/42038?color=dark%20green) ![Ansible Role](https://img.shields.io/ansible/role/d/42038?color=dark&style=flat-square) ![Ansible Quality Score](https://img.shields.io/ansible/quality/42038?label=ansible%20quality%20score) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-logrotate&metric=alert_status)](https://sonarcloud.io/dashboard?id=ansible-role-logrotate) ![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/darkwizard242/ansible-role-logrotate?label=release) ![GitHub repo size](https://img.shields.io/github/repo-size/darkwizard242/ansible-role-logrotate?color=orange&style=flat-square)
+[![Build Status](https://travis-ci.com/darkwizard242/ansible-role-logrotate.svg?branch=master)](https://travis-ci.com/darkwizard242/ansible-role-logrotate) ![Ansible Role](https://img.shields.io/ansible/role/47557?color=dark%20green) ![Ansible Role](https://img.shields.io/ansible/role/d/47557?color=dark&style=flat-square) ![Ansible Quality Score](https://img.shields.io/ansible/quality/47557?label=ansible%20quality%20score) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-logrotate&metric=alert_status)](https://sonarcloud.io/dashboard?id=ansible-role-logrotate) ![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/darkwizard242/ansible-role-logrotate?label=release) ![GitHub repo size](https://img.shields.io/github/repo-size/darkwizard242/ansible-role-logrotate?color=orange&style=flat-square)
 
 # Ansible Role: logrotate
 
@@ -53,7 +53,7 @@ For customizing behavior of role (i.e. custom config of **logrotate** ) in ansib
   roles:
     - darkwizard242.logrotate
   vars:
-    logrotate_scripts:
+    logrotate_configs:
       - name: ansible
         path: /var/log/ansible.log
         options:
@@ -77,7 +77,7 @@ For customizing behavior of role (i.e. custom config and postrotate scripts of *
   roles:
     - darkwizard242.logrotate
   vars:
-    logrotate_scripts:
+    logrotate_configs:
       - name: ansible
         path: /var/log/ansible.log
         options:
