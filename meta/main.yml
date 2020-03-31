@@ -1,0 +1,32 @@
+---
+galaxy_info:
+  role_name: logrotate
+  author: Ali Muhammad
+  description: Dynamically installs/uninstalls 'logrotate' package and sets up configurations.
+  company: none
+  license: MIT
+  min_ansible_version: 2.4
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - xenial
+        - bionic
+    - name: Debian
+      versions:
+        - jessie
+        - stretch
+        - buster
+    - name: EL
+      versions:
+        - 7
+        - 8
+
+  galaxy_tags:
+    - logrotate
+    - system
+    - os
+    - logging
+    - configuration
+
+dependencies: []
