@@ -2,7 +2,7 @@
 
 # Ansible Role: logrotate
 
-Role to install (_by default_) `logrotate` package or uninstall (_if passed as var_) on **Ubuntu** and **CentOS** systems.
+Role to install (_by default_) [logrotate](https://github.com/logrotate/logrotate) package or uninstall (_if passed as var_) as well as configure for any number of logrotate configurations on **Debian** based and **EL** based systems.
 
 ## Requirements
 
