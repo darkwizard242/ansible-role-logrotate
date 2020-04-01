@@ -7,7 +7,7 @@
     state: "{{ logrotate_desired_state }}"
     update_cache: yes
 
-- name: "Setup logrotate configuration for {{ logrotate_configs.name }}"
+- name: "Setup logrotate configuration if defined"
   template:
     src: "{{ logrotate_template }}"
     dest: "{{ logrotate_config_dir }}/{{ item.name }}"
