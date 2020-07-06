@@ -1,7 +1,7 @@
 ---
-# tasks file for logrotate - EL
+# tasks file for logrotate - EL Family
 
-- name: "Installing {{ logrotate_app }} on EL based systems."
+- name: EL Family | Installing {{ logrotate_app }}
   yum:
     name: "{{ logrotate_app }}"
     state: "{{ logrotate_desired_state }}"
