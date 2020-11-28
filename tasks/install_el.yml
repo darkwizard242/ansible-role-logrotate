@@ -11,5 +11,6 @@
   template:
     src: "{{ logrotate_template }}"
     dest: "{{ logrotate_config_dir }}/{{ item.name }}"
+    mode: '0644'
   with_items: "{{ logrotate_configs }}"
   when: logrotate_configs is defined
