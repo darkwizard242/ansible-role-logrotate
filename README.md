@@ -24,13 +24,13 @@ logrotate_template: conf.j2
 
 ### Variables table:
 
-Variable                | Value (default)  | Description
------------------------ | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------
-logrotate_app           | logrotate        | Defines the app to install i.e. **logrotate**
-logrotate_desired_state | present          | Defined to dynamically chose whether to install (i.e. either `present` or `latest`) or uninstall (i.e. `absent`) the package. Defaults to `present`.
-logrotate_config_dir    | /etc/logrotate.d | Directory to place logrotate configuration into i.e. **/etc/logrotate.d**
-logrotate_configs       | []               | Pass desired logrotate configurations. Playbook example provided.
-logrotate_template      | conf.j2          | Template used as source.
+Variable                | Description
+----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------
+logrotate_app           | Defines the app to install i.e. **logrotate**
+logrotate_desired_state | Defined to dynamically chose whether to install (i.e. either `present` or `latest`) or uninstall (i.e. `absent`) the package. Defaults to `present`.
+logrotate_config_dir    | Directory to place logrotate configuration into i.e. **/etc/logrotate.d**
+logrotate_configs       | Pass desired logrotate configurations. Playbook example provided.
+logrotate_template      | Template used as source.
 
 ## Dependencies
 
@@ -117,4 +117,4 @@ For customizing behavior of role (i.e. custom config and postrotate scripts of *
 
 ## Author Information
 
-This role was created by [Ali Muhammad](https://www.linkedin.com/in/ali-muhammad-759791130/).
+This role was created by [Ali Muhammad](https://www.alimuhammad.dev/).
