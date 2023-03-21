@@ -2,13 +2,13 @@
 # tasks file for logrotate - EL Family
 
 - name: EL Family | Installing {{ logrotate_app }}
-  yum:
+  ansible.builtin.yum:
     name: "{{ logrotate_app }}"
     state: "{{ logrotate_desired_state }}"
     update_cache: yes
 
 - name: "Setup logrotate configuration if defined"
-  template:
+  ansible.builtin.template:
     src: "{{ logrotate_template }}"
     dest: "{{ logrotate_config_dir }}/{{ item.name }}"
     mode: '0644'
