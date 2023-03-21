@@ -2,14 +2,14 @@
 # tasks file for logrotate - Debian/Ubuntu Family
 
 - name: Debian/Ubuntu Family | Installing {{ logrotate_app }}
-  apt:
+  ansible.builtin.apt:
     name: "{{ logrotate_app }}"
     state: "{{ logrotate_desired_state }}"
     force_apt_get: yes
     update_cache: yes
 
 - name: "Setup logrotate configuration if defined"
-  template:
+  ansible.builtin.template:
     src: "{{ logrotate_template }}"
     dest: "{{ logrotate_config_dir }}/{{ item.name }}"
     mode: '0644'
